@@ -13,7 +13,7 @@ public class Code03_SelectionSort {
         System.out.println(Arrays.toString(arr01));
     }
 
-    public static void selectionSort(int[] arr) {
+    private static void selectionSort(int[] arr) {
         // 先确定边界情况
         if (arr == null || arr.length < 2) {
             return;
@@ -26,7 +26,8 @@ public class Code03_SelectionSort {
             swap(arr, i, minValueIndex);
         }
     }
-    public static void swap( int[] arr, int i, int j) {
+
+    private static void swap(int[] arr, int i, int j) {
         int temp = arr[j];
         arr[j] = arr[i];
         arr[i] = temp;
