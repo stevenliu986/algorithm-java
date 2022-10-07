@@ -1,7 +1,5 @@
 import Utilities.Utils;
 
-import java.util.Arrays;
-
 /**
  * 插入排序
  * 原理：给定一个数组，0 ~ 0上已经有序，
@@ -12,9 +10,14 @@ import java.util.Arrays;
 
 public class Code05_InsertSort {
     public static void main(String[] args) {
-        int[] arr01 = {2, 5, 90, 4, -1, 45, 34, 23};
-        insertSort(arr01);
-        System.out.println(Arrays.toString(arr01));
+        int testTimes = 1000;
+        for (int i = 0; i < testTimes; i++) {
+            int[] arr01 = Utils.randomArray(10, 100);
+            insertSort(arr01);
+            if (!Utils.isSorted(arr01)) {
+                System.out.println("插入排序算法出错了");
+            }
+        }
     }
 
     private static void insertSort(int[] arr) {

@@ -1,7 +1,5 @@
 import Utilities.Utils;
 
-import java.util.Arrays;
-
 /**
  * 选择排序
  * 原理：先假设数组的第一个元素是最小值，取它的下标，用这个数与数组中的其他数进行比较，
@@ -10,9 +8,14 @@ import java.util.Arrays;
  */
 public class Code03_SelectionSort {
     public static void main(String[] args) {
-        int[] arr01 = {2, 5, 90, 4, -1, 45, 34, 23};
-        selectionSort(arr01);
-        System.out.println(Arrays.toString(arr01));
+        int testTimes = 1000;
+        for (int i = 0; i < testTimes; i++) {
+            int[] arr01 = Utils.randomArray(10, 100);
+            selectionSort(arr01);
+            if (!Utils.isSorted(arr01)) {
+                System.out.println("选择排序算法出错了");
+            }
+        }
     }
 
     private static void selectionSort(int[] arr) {
