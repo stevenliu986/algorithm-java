@@ -28,7 +28,6 @@ public class Code05_InsertSort {
             }
         }
     }
-
     private static void swap(int[] arr, int i, int j) {
         int temp = arr[j];
         arr[j] = arr[i];
