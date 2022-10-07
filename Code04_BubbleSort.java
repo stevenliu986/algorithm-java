@@ -1,3 +1,5 @@
+import Utilities.Utils;
+
 import java.util.Arrays;
 
 /**
@@ -21,15 +23,15 @@ public class Code04_BubbleSort {
         for (int i = arr.length - 1; i >= 0; i--) {
             for (int j = 1; j <= i; j++) {
                 if (arr[j - 1] > arr[j]) {
-                    swap(arr, j - 1, j);
+                    Utils.swap(arr, j - 1, j);
                 }
             }
         }
     }
 
-    private static void swap(int[] arr, int i, int j) {
-        int temp = arr[j];
-        arr[j] = arr[i];
-        arr[i] = temp;
-    }
+//    private static void swap(int[] arr, int i, int j) {
+//        int temp = arr[j];
+//        arr[j] = arr[i];
+//        arr[i] = temp;
+//    }
 }

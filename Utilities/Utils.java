@@ -1,3 +1,5 @@
+package Utilities;
+
 public class Utils {
     public static void swap(int[] arr, int i, int j) {
         int temp = arr[j];

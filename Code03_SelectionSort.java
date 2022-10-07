@@ -1,3 +1,5 @@
+import Utilities.Utils;
+
 import java.util.Arrays;
 
 /**
@@ -23,13 +25,8 @@ public class Code03_SelectionSort {
             for (int j = i + 1; j < arr.length; j++) {
                 minValueIndex = arr[j] < arr[minValueIndex] ? j : minValueIndex;
             }
-            swap(arr, i, minValueIndex);
+            Utils.swap(arr, i, minValueIndex);
         }
     }
 
-    private static void swap(int[] arr, int i, int j) {
-        int temp = arr[j];
-        arr[j] = arr[i];
-        arr[i] = temp;
-    }
 }

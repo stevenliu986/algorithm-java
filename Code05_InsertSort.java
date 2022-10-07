@@ -1,3 +1,5 @@
+import Utilities.Utils;
+
 import java.util.Arrays;
 
 /**
@@ -23,14 +25,9 @@ public class Code05_InsertSort {
         for (int i = 1; i < arr.length; i++) {
             int newValueIndex = i;
             while (newValueIndex - 1 >= 0 && arr[newValueIndex - 1] > arr[newValueIndex]) {
-                swap(arr, newValueIndex - 1, newValueIndex);
+                Utils.swap(arr, newValueIndex - 1, newValueIndex);
                 newValueIndex--;
             }
         }
-    }
-    private static void swap(int[] arr, int i, int j) {
-        int temp = arr[j];
-        arr[j] = arr[i];
-        arr[i] = temp;
     }
 }
