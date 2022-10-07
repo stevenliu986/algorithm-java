@@ -3,23 +3,17 @@
  */
 public class Code01_SumOfFactorial {
     public static void main(String[] args) {
-        int result = getFactorial(8);
+        long result = getFactorial(8);
         System.out.println(result);
     }
 
-    public static int getFactorial(int num) {
-        int temp = 0;
-        for (int i = 0; i <= num; i++) {
-            temp += factorial(i);
+    public static long getFactorial(int num) {
+        long ans = 0;
+        long cur = 1;
+        for (int i = 1; i <= num; i++) {
+            cur = cur * i;
+            ans += cur;
         }
-        return temp;
-    }
-
-    public static int factorial(int num) {
-        if (num <= 1) {
-            return 1;
-        } else {
-            return num * factorial(num - 1);
-        }
+        return ans;
     }
 }
