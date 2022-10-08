@@ -19,7 +19,7 @@ public class Code03_SelectionSort {
     }
 
     private static void selectionSort(int[] arr) {
-        // 先确定边界情况
+        // 先确定边界情况，如果数组为空或数组长度小于2，则毋须进行排序
         if (arr == null || arr.length < 2) {
             return;
         }

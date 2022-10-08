@@ -20,7 +20,7 @@ public class Code05_InsertSort {
         }
     }
 
-    private static void insertSort(int[] arr) {
+    public static void insertSort(int[] arr) {
         // 先确定边界情况
         if (arr == null || arr.length < 2) {
             return;
