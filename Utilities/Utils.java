@@ -31,4 +31,24 @@ public class Utils {
         }
         return true;
     }
+
+    // 在有序数组中查找是否存在指定的数
+    public static boolean arrHasNum(int[] arr, int num) {
+        if (arr == null || arr.length == 0) {
+            return false;
+        }
+        int left = 0;
+        int right = arr.length - 1;
+        while (left <= right) {
+            int midIndex = (left + right) / 2;
+            if (arr[midIndex] == num) {
+                return true;
+            } else if (arr[midIndex] < num) {
+                left = midIndex + 1;
+            } else {
+                right = midIndex - 1;
+            }
+        }
+        return false;
+    }
 }
