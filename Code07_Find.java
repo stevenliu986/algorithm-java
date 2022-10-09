@@ -4,15 +4,27 @@ import java.util.Arrays;
 
 public class Code07_Find {
     public static void main(String[] args) {
-        int[] arr01 = Utils.randomArray(10, 100);
-        Code05_InsertSort.insertSort(arr01);
-        int ans = findMostRightIndex(arr01, 20);
-        System.out.println(Arrays.toString(arr01));
-        System.out.println(ans);
+        // int[] arr01 = Utils.randomArray(10, 100);
+        // Code05_InsertSort.insertSort(arr01);
+        // int ans = findMostRightIndex(arr01, 20);
+        // System.out.println(Arrays.toString(arr01));
+        // System.out.println(ans);
+        //
+        // int ans01 = findMostLeftIndex(arr01, 21);
 
-        int ans01 = findMostLeftIndex(arr01, 21);
-
-        System.out.println(ans01);
+        // System.out.println(ans01);
+        System.out.println("Start");
+        int testTimes = 1000000;
+        for (int i = 1; i < testTimes; i++) {
+            int[] arr01 = Utils.randomArray(10, 100);
+            int ans02 = oneMinIndex(arr01);
+            if (!check(arr01, ans02)) {
+                System.out.println(Arrays.toString(arr01));
+                System.out.println(ans02);
+                break;
+            }
+        }
+        System.out.println("end  ");
     }
 
     // 在给定的有序数组中查找>=给定数的最左的位置的下标
